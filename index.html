@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>praticando javascript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="displey">
+      <div id="onibus">
+        <h1>Você vai para o trabalho de ônibus?</h1>
+        <p>vc trabalha quantos dia na semana ?</p>
+        <input type="number" id="dias" value="5" max="7" min="1" />
+        <p>vc gasta quanto por dia com passagens ?</p>
+        <input id="x" type="number" step="0.010" value="11.40" min="1" /> <br />
+        <button id="butt" onclick="calcular()">Calcular</button>
+      </div>
+
+      <div id="moto">
+        <h1>Você vai para o trabalho de moto?</h1>
+        <p>vc trabalha quantos dia na semana ?</p>
+        <input type="number" id="mtDia" value="5" max="7" min="1" />
+        <p>Seu trabalho fica a guantos KM da sua casa?</p>
+        <input id="km" type="number" step="0.010" value="20" min="1" />
+        <p>Qual o consumo por litro da sua moto?</p>
+        <input id="consumo" type="number" step="0.10" value="42.5" min="1" />
+        <p>Quanto você paga no litro da gasolina ?</p>
+        <input id="gasolina" type="number" step="0.010" value="5.15" min="1" />
+        <br />
+        <button class="but" onclick="calculoMoto()">Calcular</button>
+      </div>
+
+      <div id="carro">
+        <h1>Você vai para o trabalho de carro?</h1>
+        <p>vc trabalha quantos dia na semana ?</p>
+        <input type="number" id="crDia" value="5" max="7" min="1" />
+        <p>Seu trabalho fica a guantos KM da sua casa?</p>
+        <input id="crkm" type="number" step="0.010" value="20" min="1" />
+        <p>Qual o consumo por litro do seu carro?</p>
+        <input id="crconsumo" type="number" step="0.10" value="12.5" min="1" />
+        <p>Quanto você paga no litro da gasolina ?</p>
+        <input
+          id="crgasolina"
+          type="number"
+          step="0.010"
+          value="5.15"
+          min="1"
+        />
+        <br />
+        <button class="but" onclick="calculocarro()">Calcular</button>
+      </div>
+    </div>
+    <div id="">
+      <div id="respostaO">
+        <p id="res"></p>
+        <h3>Economia</h3>
+        <p>
+          O deslocamento por meio de ônibus é, sem dúvidas, mais econômico do
+          que transitar com o veículo particular. “Muitas pessoas colocam apenas
+          na ponta do lápis a gasolina utilizada para o transporte, quando há
+          outros gastos que não são contabilizados. Mesmo com ajuda de custo das
+          empresas, há o gasto com estacionamento, pedágio (se houver dentro da
+          cidade) e manutenção do carro, que deve ser mais frequente com o uso
+          diário do veículo”, comenta Petroni.
+        </p>
+        <h3>Menos trânsito</h3>
+        <p>
+          Algumas cidades estimulam o uso do transporte público com corredores
+          exclusivos para ônibus em horários de pico, o que reduz o tempo de
+          viagem. De acordo com um levantamento da empresa Scipopulis em
+          parceria com o Instituto de Políticas de Transporte & Desenvolvimento
+          (ITDP Brasil), a solução pode reduzir a duração das viagens em até 30%
+          nos trajetos em regiões movimentadas. Além disso, não há preocupação
+          em encontrar algum lugar para estacionar o carro
+        </p>
+      </div>
+
+      <div id="r">
+        <p id="respostaM"></p>
+        <h3>Vantagens de ter uma moto para trabalhar</h3>
+        <p>
+          Por ser um meio de transporte mais prático, muitas pessoas investem em
+          uma moto para lidar com os afazeres em sua rotina. Afinal, existem
+          múltiplas vantagens de se ter uma motocicleta, confira abaixo.
+        </p>
+        <h3>Você chega mais rápido ao local de destino</h3>
+        <p>
+          Por conta de sua flexibilidade e tamanho, as motos costumam trafegar
+          melhor em qualquer tipo de via. Você não precisa sair acelerando em
+          todas as etapas do seu trajeto para isso. Porém, pelo fato de furar
+          alguns bloqueios por conta de seu tamanho, a moto acaba sendo o meio
+          de transporte ideal para evitar engarrafamentos e, assim, chegar mais
+          rapidamente ao seu destino.<br />
+          Só tome cuidado ao longo de todo o trajeto, afinal, é um meio de
+          transporte que deixa o condutor bem mais vulnerável do que carro,
+          ônibus, caminhão etc.
+        </p>
+        <h3>Mais fácil de estacionar</h3>
+        <p>
+          Outro benefício da moto é ter mais liberdade para deixá-la em lugares
+          menores. Existem estacionamentos próprios para as motos, mas você não
+          precisa perder muito tempo procurando os lugares mais adequados para
+          estacioná-la.<br />
+          Se o seu trabalho exige muita locomoção de um lugar para o outro, a
+          moto não apenas facilita o trajeto, como permite guardá-la com mais
+          facilidade.
+        </p>
+        <h3>Manutenção mais barata</h3>
+        <p>
+          Outro fator a favor da moto é o custo de sua manutenção. Por ser mais
+          compacta e prática, suas peças costumam ser bem mais baratas que a de
+          um carro, por exemplo. Dependendo do modelo da sua moto, as peças de
+          reposição podem ser encontradas por um bom preço, facilitando a vida
+          do mecânico que tiver que lidar com algum tipo de problema.
+        </p>
+      </div>
+
+      <div id="respostaC">
+        <p id="rc"></p>
+        <h3>O veículo é seu!</h3>
+        <p>
+          Seu carro, seu comando. Ir de carro para o trabalho significa poder
+          parar no caminho para comprar algo que se lembrou apenas depois que
+          saiu de casa, ou até decidir visitar algum amigo na hora de voltar pra
+          casa. Ou seja, acabou aquela história de casa trabalho, trabalho casa.
+        </p>
+        <h3>Divisão de gastos</h3>
+        <p>
+          Se você for para o trabalho de carro com mais de quatro pessoas, por
+          exemplo, pode dividir os gastos, assim não sairá pesado para você. Os
+          custos de gasolina, manutenção do veículo, pedágios, dentre outros,
+          podem ser divididos. Vai sair acessível para todos que forem e, com
+          certeza, vocês vão aproveitar o trajeto!
+        </p>
+        <h3>Opções de rotas</h3>
+        <p>
+          Tudo engarrafado no trecho em que você está habituado a seguir para o
+          trabalho diariamente? Sem problemas. Com ajuda do amigo GPS, você
+          escolhe a melhor rota alternativa e pronto, seu caminho estará aberto
+          para você novamente.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

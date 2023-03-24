@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#respostaO,
+#r,
+#respostaC {
+  display: none;
+}
+body {
+  background-color: dimgrey;
+  color: black;
+}
+#displey {
+  display: flex;
+}
+#onibus,
+#moto,
+#carro {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(203, 197, 190);
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  font-size: 20px;
+}
+#dias,
+#x,
+#crDia,
+#crkm,
+#crgasolina,
+#crconsumo,
+#mtDia,
+#km,
+#consumo,
+#gasolina {
+  width: 200px;
+  height: 23px;
+  font-size: 20px;
+}
+.but {
+  width: 100px;
+  height: 40px;
+  margin: 90px 0 0 150px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#butt {
+  width: 100px;
+  height: 40px;
+  margin: 185px 0 0 150px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#respostaO {
+  width: 900px;
+  height: 320px;
+  margin: 40px 0 40px 370px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(203, 197, 190);
+  border-radius: 20px;
+  padding: 20px;
+}
+#r {
+  width: 900px;
+  height: 540px;
+  margin: 40px 0 40px 370px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(203, 197, 190);
+  border-radius: 20px;
+  padding: 20px;
+}
+#respostaC {
+  width: 900px;
+  height: 350px;
+  margin: 40px 0 40px 370px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(203, 197, 190);
+  border-radius: 20px;
+  padding: 20px;
+}
