@@ -45,4 +45,33 @@ function calculocarro() {
   rc.style.borderRadius = "10px";
   rc.innerHTML = `você anda por semana ${n} KM e tem um gasto de <strong>R$ ${qa}</strong>`;
   respostaC.style.display = "block";
+  if (qa >= 250) {
+    console.log("gasto alto reveja ir de outra forma");
+  }
+}
+
+let colocacao = 9;
+
+switch (colocacao) {
+  case 1:
+    console.log("primeiro lugar");
+    break;
+  case 2:
+    console.log("segundo lugar");
+    break;
+  case 3:
+    console.log("terceiro lugar");
+    break;
+  default:
+    console.log("nao foi desa vez");
+    break;
+}
+
+for (let i = 1; i < 10; i++) {
+  console.log(i);
+  if (i % 2 == 0) {
+    console.log("par");
+  } else {
+    console.log("inpar");
+  }
 }
