@@ -75,3 +75,21 @@ for (let i = 1; i < 10; i++) {
     console.log("inpar");
   }
 }
+
+for (let n = 1; n < 10; n++) {
+  console.log(n);
+}
+
+let aceitar = true;
+console.log("pedir uber");
+const promesa = new Promise((resolve, reject) => {
+  if (aceitar) {
+    return resolve("pedido aceito");
+  }
+  return reject("pedido negado");
+});
+console.log("aguardando");
+promesa
+  .then((result) => console.log(result))
+  .catch((erro) => console.log(erro))
+  .finally(() => console.log("finalizado"));
